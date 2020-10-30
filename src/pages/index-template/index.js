@@ -61,8 +61,12 @@ const IndexTemplatePage = {
 
     clearEventListeners: function () {
         this.currentRenderIndex = 0;
-        if (this.scrollToAppearFunction) window.removeEventListener("scroll", this.scrollToAppearFunction);
-        if (this.infiniteScrollFunction) window.removeEventListener("scroll", this.infiniteScrollFunction);
+        if (this.scrollToAppearFunction) {
+          window.removeEventListener("scroll", this.scrollToAppearFunction);
+        }
+        if (this.infiniteScrollFunction) {
+          window.removeEventListener("scroll", this.infiniteScrollFunction);
+        }
     },
     renderFixedPalettes: function (palettesArrayWithID) {
         palettesArrayWithID.reverse();
