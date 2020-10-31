@@ -96,8 +96,9 @@ const IndexTemplatePage = {
         }
         function updateInView() {
             for (const palette of document.querySelectorAll('*[data-appear]')) {
-                if (inView.apply(this, [palette]))
-                    palette.setAttribute("data-appear", "visible");
+                if (inView.apply(this, [palette])) {
+                  palette.setAttribute("data-appear", "visible");
+                }
             }
         }
         updateInView.call(this);
