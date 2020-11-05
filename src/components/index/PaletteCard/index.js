@@ -10,6 +10,7 @@ function PaletteCard(color) {
     const paletteString = `
         <div style="background-color: ${color}" class="p-item"></div>
     `
+    
     const paletteNode = paletteString.stringToHTML();
 
     const colorHammer = new Hammer(colorNode);
