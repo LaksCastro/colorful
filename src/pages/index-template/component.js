@@ -66,6 +66,7 @@ const index = function (...args) {
             this.paletteContainerNode.appendChild(paletteCardWrapper);
         }
     };
+  
     instance.init.apply(instance, [...args]);
 
     return instance;
