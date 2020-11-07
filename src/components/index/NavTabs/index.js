@@ -34,6 +34,7 @@ function NavTabItem(name, firstColor, secondColor, path) {
     const navTabNode = navTabString.stringToHTML();
 
     const navTabHammer = new Hammer(navTabNode);
+  
     navTabHammer.on("tap", () => redirect(path));
 
     return navTabNode;
