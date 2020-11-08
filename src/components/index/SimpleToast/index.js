@@ -1,17 +1,17 @@
 function SimpleToast(message) {
-    const toastString = `
-        <div id="toast-wrapper">${message}</div>
-    `
+  const toastString = `
+      <div id="toast-wrapper">${message}</div>
+  `
 
-    const toastNode = toastString.stringToHTML();
+  const toastNode = toastString.stringToHTML();
 
-    const doc = document.body;
+  const doc = document.body;
 
-    doc.appendChild(toastNode);
+  doc.appendChild(toastNode);
 
-    setTimeout(() => {
-        doc.removeChild(toastNode);
-    }, 1000);
+  setTimeout(() => {
+      doc.removeChild(toastNode);
+  }, 1000);
 }
 
 export default SimpleToast;
