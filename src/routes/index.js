@@ -82,7 +82,9 @@ const Router = function () {
             this.match();
         },
         init: function () {
-            if (!window) return;
+            if (!window) {
+              return;
+            }
 
             this.setPathname(window.location.pathname);
 
