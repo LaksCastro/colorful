@@ -9,7 +9,6 @@ import SimpleToast from "../SimpleToast";
 
 import { generateRandomNumber, createUniqueId } from "../../../scripts/utils";
 
-
 function getCardsColors(colors) {
     return colors.map(color => `<div data-height="crescent" style="background-color: ${color};"></div>`).join("");
 }
