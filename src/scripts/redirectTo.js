@@ -1,16 +1,16 @@
 let router = null;
 
 let redirect = function (pathname) {
-    if (pathname === router.pathname) return;
-    router.redirectTo(process.env.PATH_BASE === "/" ? pathname : `${process.env.PATH_BASE}${pathname}`);
+  if (pathname === router.pathname) return;
+  router.redirectTo(process.env.PATH_BASE === "/" ? pathname : `${process.env.PATH_BASE}${pathname}`);
 }
 
 let init = function (routerInstance) {
-    router = routerInstance;
+  router = routerInstance;
 }
 
 export {
-    redirect,
+  redirect,
 };
 
 export default init;
