@@ -1,9 +1,9 @@
-import "./styles/style.scss"
+import "./styles/style.scss";
 
 // Router
-import Router from "./routes"
+import Router from "./routes";
 
-import "./scripts/customPrototypes"
+import "./scripts/customPrototypes";
 
 // Local Storage To Storage Palette's
 import initLocalStorage from "./scripts/useLocalStorage";
@@ -12,38 +12,38 @@ import initLocalStorage from "./scripts/useLocalStorage";
 import Redirect from "./scripts/redirectTo";
 
 // Pages
-import Index from "./pages/index"
-import Dark from "./pages/dark"
-import Light from "./pages/light"
-import About from "./pages/about"
-import Page404 from "./pages/page404"
-import MyPalettes from "./pages/my"
+import Index from "./pages/index";
+import Dark from "./pages/dark";
+import Light from "./pages/light";
+import About from "./pages/about";
+import Page404 from "./pages/page404";
+import MyPalettes from "./pages/my";
 
-document.addEventListener('DOMContentLoaded', () => {
-    const routes = Router();
+document.addEventListener("DOMContentLoaded", () => {
+  const routes = Router();
 
-    initLocalStorage();
+  initLocalStorage();
 
-    routes.get("/", () => {
-        Index.render();
-    });
-    routes.get("/dark", () => {
-        Dark.render();
-    });
-    routes.get("/light", () => {
-        Light.render();
-    });
-    routes.get("/about", () => {
-        About.render();
-    });
-    routes.get("/my", () => {
-        MyPalettes.render();
-    });
-    routes.get("*", () => {
-        Page404.render();
-    });
+  routes.get("/", () => {
+    Index.render();
+  });
+  routes.get("/dark", () => {
+    Dark.render();
+  });
+  routes.get("/light", () => {
+    Light.render();
+  });
+  routes.get("/about", () => {
+    About.render();
+  });
+  routes.get("/my", () => {
+    MyPalettes.render();
+  });
+  routes.get("*", () => {
+    Page404.render();
+  });
 
-    Redirect(routes);
+  Redirect(routes);
 
-    routes.init();
+  routes.init();
 });
