@@ -94,6 +94,7 @@ function copyToClipboard(text) {
   document.execCommand("copy");
   document.body.removeChild(textArea);
 }
+
 function rgbToHex(rgb) {
   let hex = Number(rgb).toString(16);
   if (hex.length < 2) {
@@ -101,6 +102,7 @@ function rgbToHex(rgb) {
   }
   return hex;
 }
+
 function fullColorHex(r, g, b) {
   let red = rgbToHex(r);
   let green = rgbToHex(g);
@@ -129,6 +131,7 @@ function debounce(func, wait = 100, immediate) {
     if (callNow) func.apply(context, args);
   };
 }
+
 function createUniqueId() {
   let dt = new Date().getTime();
   let uuid = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (
@@ -140,6 +143,7 @@ function createUniqueId() {
   });
   return "palette-id-" + uuid;
 }
+
 function removeAllChildsOf(nodeElement) {
   const childsToRemove = [...nodeElement.childNodes];
   Array.from({ length: childsToRemove.length }).forEach((_, i) =>
@@ -163,6 +167,7 @@ function getLiquidRoute(newPathname) {
 function getValidRgbValue(value) {
   return value > 255 ? 255 : value;
 }
+
 export {
   generateRandomNumber,
   generateRandomColor,
